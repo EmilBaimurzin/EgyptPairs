@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.pairs.game.ui.start.FragmentStartDestination"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentEgyptWheel"
+            app:destination="@id/fragmentEgyptWheel" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEgyptWheel"
+        android:name="com.pairs.game.ui.wheel.FragmentEgyptWheel"
+        android:label="FragmentEgyptWheel" >
+        <action
+            android:id="@+id/action_fragmentEgyptWheel_to_fragmentPairs"
+            app:destination="@id/fragmentPairs" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPairs"
+        android:name="com.pairs.game.ui.pairs.FragmentPairs"
+        android:label="FragmentPairs" >
+        <argument
+            android:name="difficulty"
+            app:argType="com.pairs.game.domain.pairs.Difficulty" />
+        <action
+            android:id="@+id/action_fragmentPairs_to_dialogWin"
+            app:destination="@id/dialogWin" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogWin"
+        android:name="com.pairs.game.ui.dialogs.DialogWin"
+        android:label="DialogWin" >
+        <argument
+            android:name="time"
+            app:argType="integer" />
+    </dialog>
+</navigation>

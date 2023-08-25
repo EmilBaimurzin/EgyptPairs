@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background01">
+
+    <com.pairs.game.core.library.CustomImageButton
+        android:id="@+id/home"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/wheelOutside"
+        android:layout_width="340dp"
+        android:layout_height="340dp"
+        android:src="@drawable/wheel01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home" />
+
+    <ImageView
+        android:id="@+id/wheel4"
+        android:layout_width="340dp"
+        android:layout_height="340dp"
+        android:scaleX="1.18"
+        android:scaleY="1.18"
+        android:src="@drawable/wheel02"
+        android:padding="23dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home" />
+
+    <ImageView
+        android:id="@+id/wheel3"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:scaleX="1.37"
+        android:scaleY="1.37"
+        android:src="@drawable/wheel03"
+        app:layout_constraintBottom_toBottomOf="@+id/wheelOutside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/wheelOutside" />
+
+    <ImageView
+        android:id="@+id/wheel2"
+        android:layout_width="136dp"
+        android:scaleX="1.255"
+        android:scaleY="1.255"
+        android:layout_height="136dp"
+        android:src="@drawable/wheel04"
+        app:layout_constraintBottom_toBottomOf="@+id/wheelOutside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home" />
+
+    <ImageView
+        android:id="@+id/centerWheel"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/wheel05"
+        app:layout_constraintBottom_toBottomOf="@+id/wheelOutside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wheelOutside" >
+        
+        <com.pairs.game.core.library.CustomImageButton
+            android:id="@+id/easy"
+            android:layout_width="230dp"
+            android:layout_height="90dp"
+            android:src="@drawable/easy"/>
+
+        <com.pairs.game.core.library.CustomImageButton
+            android:id="@+id/normal"
+            android:layout_width="230dp"
+            android:layout_marginVertical="10dp"
+            android:layout_height="90dp"
+            android:src="@drawable/normal"/>
+
+        <com.pairs.game.core.library.CustomImageButton
+            android:id="@+id/hard"
+            android:layout_width="230dp"
+            android:layout_height="90dp"
+            android:src="@drawable/hard"/>
+        
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
